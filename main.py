@@ -8,17 +8,17 @@ from training.records import records
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/api")
 async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/hello/{name}")
+@app.get("/api/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
 
-@app.get("/pinecone/search")
+@app.get("/api/pinecone/search")
 async def pinecone_search(query: str):
     try:
         results = pinecone_utils.search(index_name=Config.PINECONE_INDEX,
@@ -30,7 +30,7 @@ async def pinecone_search(query: str):
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-@app.get("/pinecone/upsert")
+@app.get("/api/pinecone/upsert")
 async def pinecone_upsert():
     try:
         pinecone_utils.upsert_index_records(Config.PINECONE_INDEX, records)
@@ -40,7 +40,7 @@ async def pinecone_upsert():
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-@app.get("/pinecone/health")
+@app.get("/api/pinecone/health")
 async def pinecone_health():
     try:
         health_status = pinecone_utils.check_status(Config.PINECONE_INDEX)
