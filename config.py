@@ -23,3 +23,4 @@ class Config:
 
     PINECONE_API_KEY = os.getenv('PINECONE_API_KEY', 'your-pinecone-api-key')
     PINECONE_INDEX = os.getenv('PINECONE_INDEX', 'your-pinecone-index')
+    PINECONE_NAMESPACE = os.getenv('PINECONE_NAMESPACE', 'your-pinecone-namespace')
