@@ -49,8 +49,8 @@ A blazing-fast, production-ready backend API built with [FastAPI](https://fastap
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fastapi-pinecone-api.git
-cd fastapi-pinecone-api
+git clone  https://github.com/asif4347/pinecone-vector-db.git
+cd pinecone-vector-db
 ```
 
 ### 2. Create a Virtual Environment
@@ -151,7 +151,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 💬 Questions or Support?
 
-Open an [Issue](https://github.com/your-username/fastapi-pinecone-api/issues) or reach out at `moh.asif4347@gmail.com`.
+Open an [Issue](https://github.com/asif4347/pinecone-vector-db/issues) or reach out at `moh.asif4347@gmail.com`.
 
 ---
 
